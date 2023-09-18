@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const epilogue = Epilogue({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         className={`${epilogue.className} bg-white dark:bg-black min-h-[100dvh]`}
       >
         <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );
